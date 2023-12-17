@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('dashboard/', views.home, name='home'),
     path('about/', views.about, name="about"),
-
+    path('translate/', views.translate, name="translate"),
+    path('chatbot/', views.chatbot, name="chatbot"),
 ]
 
