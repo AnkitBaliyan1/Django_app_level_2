@@ -131,4 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # manual addition from here
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')

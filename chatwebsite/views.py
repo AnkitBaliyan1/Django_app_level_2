@@ -7,14 +7,22 @@ from .forms import InputForm
 
 # Create your views here.
 def home(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 def about(request):
     return render(request, 'about.html')
 
+def upcoming(request):
+    return render(request, 'upcoming.html')
+
+def contactus(request):
+    return render(request, 'contactus.html')
 
 
-client = OpenAI(api_key=settings.OPENAI_API_KEY)
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 def generate_message(system_input, user_input):
     message = [{

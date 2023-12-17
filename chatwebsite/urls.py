@@ -8,5 +8,7 @@ urlpatterns = [
     path('about/', views.about, name="about"),
     path('translate/', views.translate, name="translate"),
     path('chatbot/', views.chatbot, name="chatbot"),
+    path('upcoming/', views.upcoming, name="upcoming"),
+    path('contactus/', views.contactus, name="contactus"),
 ]
 
