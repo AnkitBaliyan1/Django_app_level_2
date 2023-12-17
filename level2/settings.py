@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-qzf3vksam*ax2v%jwc#=tk=diuj0g77m@roopq2o(dt6rn&k5e
 
 # to deploy 
 DEBUG = False
-ALLOWED_HOSTS = ["django-with-navigation.azurewebsites.net"]
+#ALLOWED_HOSTS = ["django-with-navigation.azurewebsites.net"]
 
 # while renning on local server
 #DEBUG = True
@@ -136,3 +136,5 @@ STATICFILES_DIRS = [
 ]
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
